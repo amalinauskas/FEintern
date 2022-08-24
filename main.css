@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #f3f3f3;
+}
+
+.mainContainer {
+  display: flex;
+  height: 100vh;
+}
+
+.left {
+  width: 50%;
+  /* background-color: #9e9c9c; */
+  overflow: auto;
+}
+
+/* scrollbaras */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #ccc;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+.right {
+  width: 50%;
+  /* background-color: #ccc; */
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: #eee;
+  box-shadow: 0px 0px 10px #00000033;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .list {
+  /* width: 100%; */
+  max-width: 768px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+main .list img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+main .list .item {
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+}
+main .list .item:last-of-type {
+  border-bottom: none;
+}
+main .list .item:hover {
+  background: #0000000d;
+  cursor: pointer;
+}
+
+.pagenumbers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagenumbers button {
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+
+  appearance: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  background-color: #b9fff8;
+
+  margin: 5px;
+  transition: 0.4s;
+
+  color: #000000;
+  font-size: 18px;
+  text-shadow: 0px 0px 4px #00000033;
+  box-shadow: 0px 0px 4px #00000033;
+}
+
+.pagenumbers button:hover {
+  background-color: #ffac78;
+}
+
+.pagenumbers button.active {
+  background-color: #ff9551;
+  box-shadow: inset 0px 0px 4px #00000033;
+}
